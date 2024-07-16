@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cineflix</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #ff0000;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .topbar {
+            display: flex;
+            justify-content: flex-end;
+            background-color: #ddd;
+            padding: 10px;
+            flex-wrap: wrap;
+        }
+        .topbar a {
+            color: black;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #ddd;
+            padding: 10px;
+            flex-wrap: wrap;
+        }
+        .navbar a {
+            color: black;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        .promotions {
+            background-image: url('fondee.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 40px 20px;
+            margin: 20px 0;
+            height: 200px;
+        }
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0 10px;
+        }
+        .movie-card {
+            background-color: white;
+            margin: 10px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 200px;
+        }
+        .movie-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .movie-card button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        @media (max-width: 768px) {
+            .topbar, .navbar {
+                justify-content: center;
+            }
+            .promotions {
+                height: 150px;
+                padding: 20px 10px;
+            }
+            .movie-card img {
+                height: 200px;
+            }
+        }
+        @media (max-width: 480px) {
+            .topbar a, .navbar a {
+                padding: 10px 5px;
+            }
+            .promotions {
+                height: 100px;
+                padding: 10px;
+            }
+            .movie-card img {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <a href="conocenos.html">Conócenos</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="index.html">Salir</a>
+    </div>
+    <div class="header">
+        <h1>CINEFLIX</h1>
+    </div>  
+    <div class="navbar">
+        <a href="cartelera.html">Cartelera</a>
+    
+
+    </div>
+    <div class="promotions"></div>
+    <div class="main">
+        <div class="movie-card">
+            <img src="jul.webp" alt="Movie 1">
+            <a href="video.html"><button>Ver Horarios</button></a>
+        </div>
+        <div class="movie-card">
+            <img src="pel2.jpg" alt="Movie 2">
+            <a href="video2.html"><button>Ver Horarios</button></a>
+        </div>
+        <div class="movie-card">
+            <img src="bad.jpg" alt="Movie 3">
+            <a href="video3.html"><button>Ver Horarios</button></a>
+        </div>
+        <div class="movie-card">
+            <img src="4.jpg" alt="Movie 4">
+            <a href="video4.html"><button>Ver Horarios</button></a>
+        </div>
+        <div class="movie-card">
+            <img src="5.jpg" alt="Movie 5">
+            <a href="video5.html"><button>Ver Horarios</button></a>
+        </div>
+        <div class="movie-card">
+            <img src="6.jpg" alt="Movie 6">
+            <a href="video6.html"><button>Ver Horarios</button></a>
+        </div>
+        <div class="movie-card">
+            <img src="7.jpg" alt="Movie 7">
+            <a href="video7.html"><button>Ver Horarios</button></a>
+        </div>
+        <div class="movie-card">
+            <img src="8.jpg" alt="Movie 8">
+            <a href="video8.html"><button>Ver Horarios</button></a>
+        </div>
+    </div>
+</body>
+</html>
+
+

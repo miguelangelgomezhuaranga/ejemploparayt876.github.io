@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cineflixt</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('intensamente.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    header {
+      background-color: rgba(51, 51, 51, 0.9);
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    nav {
+      display: flex;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: #555;
+    }
+    .content {
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      margin: 20px;
+      border-radius: 10px;
+    }
+    .movie-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    .movie-details {
+      margin-bottom: 20px;
+    }
+    .movie-details h2 {
+      margin-top: 0;
+    }
+    .movie-details p {
+      margin-bottom: 10px;
+    }
+    .movie-details ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    .movie-details li {
+      margin-bottom: 5px;
+    }
+    .movie-video {
+      width: 100%;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+    .options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .options button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .options button:hover {
+      background-color: #555;
+    }
+    .hidden {
+      display: none;
+    }
+
+    /* Media queries para dispositivos más pequeños */
+    @media only screen and (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .logo {
+        margin-bottom: 10px;
+      }
+      nav {
+        margin-top: 10px;
+      }
+      .options {
+        flex-direction: column;
+      }
+      .options button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+  <script>
+    function showHours(day) {
+      var hours = document.querySelectorAll('.hours');
+      hours.forEach(function(hour) {
+        if (hour.dataset.day === day) {
+          hour.classList.remove('hidden');
+        } else {
+          hour.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo">Cineflixt</div>
+    <nav>
+      <a href="cartelera.html">CARTELERA</a>
+      <a href="tienda.html">TIENDA</a>
+    </nav>
+  </header>
+  <div class="content">
+    <div class="movie-info">
+      <div class="movie-details">
+        <h2>INTENSAMENTE</h2>
+        <p>Título original: Intensamente</p>
+        <ul>
+          <li>Horario: 
+            <div class="options">
+              <button onclick="showHours('lunes')">Lunes</button>
+              <button onclick="showHours('martes')">Martes</button>
+              <button onclick="showHours('miercoles')">Miércoles</button>
+            </div>
+            <div class="options hours hidden" data-day="lunes">
+              <button>17:00</button>
+              <button>18:30</button>
+              <button>20:30</button>
+              <button>21:00</button>
+            </div>
+            <div class="options hours hidden" data-day="martes">
+              <button>17:00</button>
+              <button>19:30</button>
+              <button>20:00</button>
+            </div>
+            <div class="options hours hidden" data-day="miercoles">
+              <button>17:00</button>
+              <button>20:30</button>
+              <button>22:00</button>
+            </div>
+          </li>
+          <li>Precio: 
+            <div class="options">
+              <button>Adulto $9.75</button>
+              <button>Niño $6.75</button>
+            </div>
+          </li>
+          <li>Función de descuento: Lunes a Miércoles $1 de descuento</li>
+        </ul>
+      </div>
+      <video class="movie-video" controls>
+        <source src="video1.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+      </video>
+    </div>
+  </div>
+</body>
+</html>
